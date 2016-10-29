@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:configChanges="orientation|keyboardHidden"
+    android:background="@android:color/holo_orange_light"
+    >
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap it!"
+        android:id="@+id/tapIt"
+        android:layout_gravity="center_horizontal"
+        android:background="#91a3e7"
+        android:clickable="true"
+        android:height="150dp"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:width="200dp"
+        android:typeface="monospace"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="104dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/score"
+        android:width="200dp"
+        android:textColor="#ffffff"
+        android:textSize="40sp"
+        android:height="60dp"
+        android:layout_alignParentTop="true"
+        android:text="Score:"
+        android:enabled="false"
+        android:minWidth="200dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_alignRight="@+id/slideIt"
+        android:layout_alignEnd="@+id/slideIt"
+        android:layout_alignLeft="@+id/slideIt"
+        android:layout_alignStart="@+id/slideIt" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="..."
+        android:id="@+id/commandMsg"
+        android:layout_below="@+id/score"
+        android:layout_centerHorizontal="true"
+        android:textSize="55dp" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/slideIt"
+        android:visibility="visible"
+        android:progress="0"
+        android:minWidth="250dp"
+        android:minHeight="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:max="100"
+        android:indeterminate="false" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/timerProg"
+        android:layout_above="@+id/tapIt"
+        android:layout_centerHorizontal="true"
+        android:max="100"
+        android:maxWidth="100dp"
+        android:minWidth="200dp"
+        android:minHeight="50dp"
+        android:visibility="visible"
+        android:indeterminate="false" />
+
+</RelativeLayout>
